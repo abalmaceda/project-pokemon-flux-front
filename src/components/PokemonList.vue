@@ -12,7 +12,7 @@
         <template v-for="(item, index) in pokemonListCPT">
           <v-list-item v-if='item.num'
             :key="`pokemon-´${item.num}`">
-            <template v-slot:default="{ active }">
+            <template v-slot:default>
               <v-list-item-avatar>
                 <v-img
                   :src="item.img"
@@ -32,20 +32,6 @@
 
               <v-list-item-action>
                 <v-list-item-action-text v-text="item.num"></v-list-item-action-text>
-
-                <v-icon
-                  v-if="!active"
-                  color="grey lighten-1"
-                >
-                  mdi-star-outline
-                </v-icon>
-
-                <v-icon
-                  v-else
-                  color="yellow darken-3"
-                >
-                  mdi-star
-                </v-icon>
               </v-list-item-action>
             </template>
           </v-list-item>
