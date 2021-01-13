@@ -113,6 +113,7 @@
               >
             <v-chip v-for="(element, index) in pokemonInfoCPT.type"
               :key='`type-${index}`'
+              color='success'
             >{{element}}</v-chip>
 
             </v-chip-group>
@@ -136,13 +137,13 @@
     <v-card-text justify='center' align='center'>
       <v-row no-gutters
         align="center"
-         justify="center"
+        justify="center"
         class="mx-0"
       >
        <v-chip-group column>
         <v-chip v-if='pokemonInfoCPT.weight'
           class="ma-2"
-          color="deep-purple accent-4"
+           color="indigo darken-3"
           outlined
         >
           Peso: {{pokemonInfoCPT.weight}}
@@ -150,14 +151,14 @@
 
            <v-chip v-if='pokemonInfoCPT.height'
           class="ma-2"
-          color="deep-purple accent-4"
+           color="indigo darken-3"
           outlined
         >
           Altura: {{pokemonInfoCPT.height}}
         </v-chip>
         <v-chip v-if='pokemonInfoCPT.candy'
           class="ma-2"
-          color="deep-purple accent-4"
+           color="indigo darken-3"
           outlined
         >
           Candy: {{pokemonInfoCPT.candy}}
@@ -165,7 +166,7 @@
 
         <v-chip v-if='pokemonInfoCPT.egg'
           class="ma-2"
-          color="deep-purple accent-4"
+           color="indigo darken-3"
           outlined
         >
           Egg {{pokemonInfoCPT.egg}}
@@ -173,7 +174,7 @@
 
         <v-chip v-if='pokemonInfoCPT.candy_count'
           class="ma-2"
-          color="deep-purple accent-4"
+           color="indigo darken-3"
           outlined
         >
           Candy count: {{pokemonInfoCPT.candy_count}}
@@ -181,7 +182,7 @@
 
          <v-chip v-if='pokemonInfoCPT.spawn_chance'
           class="ma-2"
-          color="deep-purple accent-4"
+           color="indigo darken-3"
           outlined
         >
           Spawn Chance: {{pokemonInfoCPT.spawn_chance}}
@@ -189,7 +190,7 @@
 
         <v-chip v-if='pokemonInfoCPT.avg_spawns'
           class="ma-2"
-          color="deep-purple accent-4"
+           color="indigo darken-3"
           outlined
         >
           Avg. Spawn: {{pokemonInfoCPT.avg_spawns}}
@@ -197,7 +198,7 @@
 
         <v-chip v-if='pokemonInfoCPT.spawn_time'
           class="ma-2"
-          color="deep-purple accent-4"
+           color="indigo darken-3"
           outlined
         >
           Spawn Time: {{pokemonInfoCPT.spawn_time}}
@@ -221,7 +222,7 @@
         <v-chip v-for="evol in pokemonInfoCPT.prev_evolution"
           :key='`${pokemonInfoCPT.num}-${evol.num}`'
           class="ma-2"
-          color="deep-purple accent-4"
+          color="primary"
           outlined
         >
           #{{evol.num}} {{evol.name}}
@@ -263,6 +264,7 @@
       >
         <v-chip v-for="(weaknesse, index) in pokemonInfoCPT.weaknesses"
           :key='`weak-${index}`'
+          color='warning'
         >{{weaknesse}}</v-chip>
 
         <!-- <v-chip>7:30PM</v-chip>
